@@ -11,8 +11,8 @@
   --creme-fonce: #EFE6CE;
   --blanc: #FFFFFF;
 
-  --police-titre: 'Fraunces', Georgia, 'Times New Roman', serif;
-  --police-texte: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --police-titre: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  --police-texte: 'Karla', 'Segoe UI', system-ui, sans-serif;
 
   --rayon: 12px;
   --ombre: 0 10px 30px rgba(42,36,25,0.12);
@@ -129,3 +129,24 @@ p{ margin: 0 0 12px; }
   @keyframes v3ken{ from{ transform: scale(1.05); } to{ transform: scale(1.13); } }
   .hero-fond img{ animation: v3ken 26s ease-in-out infinite alternate; will-change: transform; }
 }
+
+/* ===== Rafraîchissement du 19 août 2026 — identité marché ===== */
+
+/* L'auvent du marché : rayures or/crème sous le héros et au pied. */
+.hero::after,
+.pied::before{
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0; right: 0;
+  height: 10px;
+  background: repeating-linear-gradient(90deg,
+    var(--or) 0 26px, var(--creme) 26px 52px);
+}
+.hero::after{ bottom: 0; }
+.pied{ position: relative; }
+.pied::before{ top: 0; }
+
+/* Bricolage Grotesque : titres bien serrés, à la manière d'une enseigne. */
+h1, h2{ font-weight: 800; letter-spacing: -0.015em; }
+.marque-nom{ font-weight: 800; }
